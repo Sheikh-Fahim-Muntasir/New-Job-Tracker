@@ -24,7 +24,8 @@
             font-family: "outfit", sans-serif;
         }
     </style>
-    <script src="./tailwind.css"></script>
+
+    <link rel="stylesheet" href="./tailwind.css">
 </head>
 
 <body class="bg-base-400 space-y-3 ">
@@ -35,15 +36,15 @@
         <div class="lg:grid lg:grid-cols-3 py-5 gap-5 space-y-5   ">
             <div class="bg-amber-50 text-2xl space-y-4 rounded-lg p-5.5">
                 <p>Total</p>
-                <p id="total-job" class="text-blue-600 text-4xl"></p>
+                <p id="total-start" class="text-blue-600 text-4xl"></p>
             </div>
             <div class="bg-amber-50 text-2xl space-y-4 rounded-lg p-5.5">
                 <p id="total-interview">Interview</p>
-                <p id="interview-count" class="text-green-500 text-4xl"></p>
+                <p id="total-inter" class="text-green-500 text-4xl"></p>
             </div>
             <div class="bg-amber-50 text-2xl space-y-4 rounded-lg p-5.5 max-h-[87%]">
                 <p class="text-blue-500 ">Rejected</p>
-                <p id="rejected-count" class="text-4xl   text-orange-700"> </p>
+                <p id="total-reject" class="text-4xl   text-orange-700"> </p>
             </div>
         </div>
     </section>
