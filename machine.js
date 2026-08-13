@@ -21,18 +21,75 @@ function Goto(id) {
 `
 // job counter start`
 
-let totalStart = getValue("total-start");
-let interStart = getValue("total-inter");
-let rejectStart = getValue("total-reject");
-// total
-totalStart = document.getElementById("all-container").children.length;
-console.log("total jobs ", totalStart);
-document.getElementById("total-start").innerText = totalStart
-// interview total
-interStart = document.getElementById("inter-container").children.length;
-console.log("total interview ", interStart);
-document.getElementById("total-inter").innerText = interStart
-// rejected total
-rejectStart = document.getElementById("reject-container").children.length;
-console.log("total rejected ", rejectStart);
-document.getElementById("total-reject", rejectStart).innerText = rejectStart
+function updateCounters() {
+    const total = document.getElementById("all-container").children.length;
+    const interview = document.getElementById("inter-container").children.length;
+    const rejected = document.getElementById("reject-container").children.length;
+
+    document.getElementById("total-start").innerText = total;
+    document.getElementById("total-inter").innerText = interview;
+    document.getElementById("total-reject").innerText = rejected;
+}
+updateCounters();
+
+
+
+// Event Listener for all 3 section 
+document.getElementById("job-container").addEventListener("click", function (event) {
+    const clickedElement = event.target;
+    // console.log(clickedElement)
+    const card = clickedElement.parentNode.parentNode.parentNode;
+    console.log(card)
+
+
+    if (clickedElement.classList.contains("inter-btn")) {
+        document.getElementById("inter-container").appendChild(card);
+        console.log("child appended")
+        const status = card.querySelector("#status");
+
+        status.innerText = "Interview";
+        updateCounters()
+    }
+
+    if (clickedElement.classList.contains("reject-btn")) {
+        document.getElementById("reject-container").appendChild(card);
+        console.log("child appended")
+        const status = card.querySelector("#status")
+        status.innerText = "Rejected";
+        card.querySelector("#status").classList.add("btn-error", "btn-dash")
+        updateCounters()
+    }
+    if (clickedElement.classList.contains("bin-btn")) {
+        document.getElementById("bin-container").appendChild(card);
+        console.log("child appended")
+        console.log("babu deleted")
+
+        updateCounters()
+    }
+});
+
+// Interview section 
+document.getElementById("inter-container").addEventListener("click", function (Event) {
+    const clickedElement = Event.target;
+    const card = clickedElement.parentNode.parentNode.parentNode;
+    if (clickedElement.classList.contains("reject-btn")) {
+        document.getElementById("reject-container").appendChild(card);
+
+        card.querySelector("#status").innerText = "Rejected"
+    }
+
+    if (clickedElement.classList.contains("bin-btn")) {
+        document.getElementById("bin-container").appendChild(card)
+        console.log("babu deleted")
+    }
+});
+// // // rejected section
+document.getElementById("reject-container").addEventListener("click", function (event) {
+    const clickedElement = event.target;
+    const card = clickedElement.parentNode.parentNode.parentNode;
+    if (card.querySelector(".bin-btn")) {
+        document.getElementById("bin-container").appendChild(card);
+    }
+})
+
+

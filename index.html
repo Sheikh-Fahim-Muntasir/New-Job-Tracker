@@ -31,7 +31,7 @@
 <body class="bg-base-400 space-y-3 ">
     <!-- header section  -->
 
-    <section class="  w-7/10 bg-base-300 mx-auto mt-10 p-5 rounded-lg shadow-lg  ">
+    <section class="  w-9/10 bg-base-300  mx-auto mt-10 p-5 rounded-lg shadow-lg  ">
         <p class="text-4xl text-blue-900">Job Application Tracker</p>
         <div class="lg:grid lg:grid-cols-3 py-5 gap-5 space-y-5   ">
             <div class="bg-amber-50 text-2xl space-y-4 rounded-lg p-5.5">
@@ -50,7 +50,7 @@
     </section>
 
     <!-- job Section -->
-    <section class="w-7/10 bg-base-300 mx-auto mt-10 p-5 rounded-lg  space-y-4 job-container">
+    <section id="job-container" class="w-9/10 bg-base-300 mx-auto mt-10 p-5 rounded-lg  space-y-4 job-container">
         <div class="flex justify-between">
             <p class="text-4xl text-blue-900 p-5">Available Jobs</p>
             <p class="text-lg"><span id="job-count">8</span> jobs</p>
@@ -72,15 +72,17 @@
         <!-- Job items will be added here dynamically -->
 
 
-        <section id="all-container" class=" space-y-7 text2">
+        <section id="all-container" class=" space-y-7 mt-5  ">
             <!-- 1st jbo -->
-            <section class="  bg-amber-50  flex  mx-auto max-w-[95%] w-full mt-3.5  ">
-                <div class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[80%]      
+            <section class="  bg-amber-50  flex  mx-auto max-w-[95%] w-full mt-3.5 .card mt">
+                <div class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[70%]      
              ">
                     <h1 class="text-xl font-semibold  text-blue-900">Mobile First Corp</h1>
                     <p class=" text-neutral-600">React Native Developer</p>
                     <p class=" text-neutral-600">Remote • Full-time • $130,000 - $175,000</p>
-                    <button class="btn btn-soft btn-primary text-xl   max-w-[140px]"> Not applied</button>
+                    <button id="status" class="btn   btn-soft btn-primary text-xl max-w-[140px]                ">
+                        Not
+                        applied</button>
                     <p class="text-neutral-600">Build cross-platform mobile applications using React Native. Work on
                         products used by millions of users worldwide.</p>
                     <!-- btn div  -->
@@ -89,9 +91,9 @@
                         <button class="btn btn-outline btn-error  reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div id="bin" class="w-[15%] flex justify-center items-start pt-5">
+                <div id="bin" class="w-[25%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
             </section>
@@ -100,11 +102,12 @@
 
             <!-- 2nd job -->
             <section id="section-div" class=" bg-amber-50  flex  mx-auto max-w-[95%] w-full">
-                <div id="info-div" class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[80%]  ">
+                <div id="info-div" class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[71%]  ">
                     <h1 class="text-xl font-semibold  text-blue-900">WebFlow Agency</h1>
                     <p class=" text-neutral-600">Web Designer & Developer</p>
                     <p class=" text-neutral-600">Los Angeles, CA • Part-time • $80,000 - $120,000</p>
-                    <button class="btn btn-soft btn-primary text-xl   max-w-[140px]"> Not applied</button>
+                    <button id="status" class="btn btn-soft btn-primary text-xl s   max-w-[140px]"> Not
+                        applied</button>
                     <p class="text-neutral-600">Create stunning web experiences for high-profile clients. Must have
                         portfolio and experience with modern web design <br> trends..</p>
                     <!-- btn div  -->
@@ -113,9 +116,9 @@
                         <button class="btn btn-outline btn-error  reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div id="bin" class="w-[15%] flex justify-center items-start pt-5 ">
+                <div id="bin" class="w-[24%] flex justify-center items-start pt-5 ">
                     <p class=" left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
             </section>
@@ -124,11 +127,11 @@
             <!-- 3rd job -->
             <section class="bg-amber-50  flex  mx-auto max-w-[95%] w-full">
 
-                <div class=" bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[80%] ">
+                <div class=" bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[70%] ">
                     <h1 class="text-xl font-semibold  text-blue-900">DataViz Solutions</h1>
                     <p class=" text-neutral-600">Data Visualization Specialist</p>
                     <p class=" text-neutral-600">Boston, MA • Full-time • $125,000 - $165,000</p>
-                    <button class="btn btn-soft btn-primary text-xl  max-w-[140px]"> Not applied</button>
+                    <button id="status" class="btn btn-soft btn-primary text-xl  max-w-[140px]"> Not applied</button>
                     <p class="text-neutral-600">Transform complex data into compelling visualizations. Required skills:
                         D3.js, React, and strong analytical thinking.</p>
                     <!-- btn div  -->
@@ -137,9 +140,9 @@
                         <button class="btn btn-outline btn-error  reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[15%] flex justify-center items-start pt-5">
+                <div class="w-[26%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
             </section>
@@ -147,12 +150,13 @@
             </div>
             <!-- 4th job -->
             <section class="  bg-amber-50  flex  mx-auto max-w-[95%] w-full">
-                <div class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[80%]  
+                <div class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[60%]  
              ">
                     <h1 class="text-xl font-semibold  text-blue-900">CloudFirst Inc</h1>
                     <p class=" text-neutral-600">Backend Developer</p>
                     <p class=" text-neutral-600">Seattle, WA • Full-time • $140,000 - $190,000</p>
-                    <button class="btn btn-soft btn-primary text-xl   max-w-[140px]"> Not applied</button>
+                    <button id="status" class="btn btn-soft btn-primary text-xl max-w-[140px]"> Not
+                        applied</button>
                     <p class="text-neutral-600">Design and maintain scalable backend systems using Python and AWS. Work
                         with
                         modern DevOps practices <br> and cloud infrastructure.</p>
@@ -162,9 +166,9 @@
                         <button class="btn btn-outline btn-error  reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[15%] flex justify-center items-start pt-5">
+                <div class="w-[33%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
             </section>
@@ -174,7 +178,8 @@
                     <h1 class="text-xl font-semibold  text-blue-900">Innovation Labs</h1>
                     <p class=" text-neutral-600">UI/UX Engineer</p>
                     <p class=" text-neutral-600">Austin, TX • Full-time • $110,000 - $150,000</p>
-                    <button class="btn btn-soft btn-primary text-xl   max-w-[140px]"> Not applied</button>
+                    <button id="status" class="btn btn-soft btn-primary text-xl    max-w-[140px]"> Not
+                        applied</button>
                     <p class="text-neutral-600">Create beautiful and functional user interfaces for our suite of
                         products.
                         Strong design skills and frontend development expertise required..</p>
@@ -184,9 +189,9 @@
                         <button class="btn btn-outline btn-error    reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[15%] flex justify-center items-start pt-5">
+                <div class="w-[13%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
             </section>
@@ -196,19 +201,20 @@
                     <h1 class="text-xl font-semibold  text-blue-900">MegaCorp Solutions</h1>
                     <p class=" text-neutral-600">JavaScript Developer</p>
                     <p class=" text-neutral-600">New York, NY • Full-time • $130,000 - $170,00</p>
-                    <button class="btn btn-soft btn-primary text-xl   max-w-[140px]"> Not applied</button>
+                    <button id="status" class="btn btn-soft btn-primary text-xl    max-w-[140px]"> Not
+                        applied</button>
                     <p class="text-neutral-600">Build enterprise applications with JavaScript and modern frameworks. We
                         offer competitive compensation, health insurance, and professional development opportunities.
                     </p>
                     <!-- btn div  -->
                     <div class="flex gap-5">
                         <button class="btn btn-outline btn-success inter-btn">INTERVIEW</button>
-                        <button class="btn btn-outline btn-error">REJECTED</button>
+                        <button class="btn btn-outline btn-error reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[15%] flex justify-center items-start pt-5">
+                <div class="w-[13%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
             </section>
@@ -218,7 +224,7 @@
                     <h1 class="text-xl font-semibold  text-blue-900">StartupXYZ</h1>
                     <p class=" text-neutral-600">Full Stack Engineer</p>
                     <p class=" text-neutral-600">Remote • Full-time • $120,000 - $160,000</p>
-                    <button class="btn btn-soft btn-primary text-xl  max-w-[140px]  "> Not applied</button>
+                    <button id="status" class="btn btn-soft btn-primary text-xl  max-w-[140px]  "> Not applied</button>
                     <p class="text-neutral-600">Join our fast-growing startup and work on our core platform. Experience
                         with
                         Node.js and React required. Great benefits and equity package included.</p>
@@ -228,9 +234,9 @@
                         <button class="btn btn-outline btn-error  reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[15%] flex justify-center items-start pt-5">
+                <div class="w-[13%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
 
@@ -243,7 +249,8 @@
                     <h1 class="text-xl font-semibold  text-blue-900">TechCorp Industries</h1>
                     <p class=" text-neutral-600">Senior Frontend Developer</p>
                     <p class=" text-neutral-600">San Francisco, CA • Full-time • $130,000 - $175,000</p>
-                    <button class="btn btn-soft btn-primary text-xl   max-w-[140px]"> Not applied</button>
+                    <button id="status" class="btn btn-soft btn-primary text-xl     max-w-[140px]"> Not
+                        applied</button>
                     <p class="text-neutral-600">We are looking for an experienced Frontend Developer to build
                         scalable
                         web
@@ -256,9 +263,9 @@
                     </div>
                 </div>
 
-                <div class="w-[15%] flex justify-center items-start pt-5">
+                <div class="w-[14%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
-                        <i class="fa-solid fa-trash-can"></i>
+                        <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
                 </div>
             </section>
@@ -267,15 +274,19 @@
     </section>
     </section>
     <!-- Iterview section -->
-    <section id="inter-container" class="w-7/10 mx-auto">
-        <div></div>
-        <div></div>
+    <section class="bg-base-300 max-w-[90%] mx-auto hid n space-y-5">
+        <section id="inter-container" class="w-9/10 mx-auto bg-base-300 mt-3  space-y-5 pt-5">
+
+        </section>
     </section>
 
     <!-- Rejected Section -->
-    <section id="reject-container" class="w-7/10">
-
+    <section class="max-w-[90%] mx-auto bg-base-300 hiden">
+        <section id="reject-container" class="w-9/10 mx-auto  space-y-5">
+        </section>
     </section>
+    <!-- bin container -->
+    <section id="bin-container" class="hidden"></section>
     <!-- scripts are here -->
     <script src="./machine.js"></script>
 
