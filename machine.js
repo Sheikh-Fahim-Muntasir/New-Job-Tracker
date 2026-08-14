@@ -18,8 +18,8 @@ function Goto(id) {
     const showOnly = document.getElementById(id)
     showOnly.classList.remove("hidden")
 }
-`
-// job counter start`
+
+// job counter start
 
 function updateCounters() {
     const total = document.getElementById("all-container").children.length;
@@ -29,6 +29,32 @@ function updateCounters() {
     document.getElementById("total-start").innerText = total;
     document.getElementById("total-inter").innerText = interview;
     document.getElementById("total-reject").innerText = rejected;
+    document.getElementById("total-start2").innerText = total;
+
+    document.getElementById("empty-container").classList.add("hidden");
+    if (total === 0) {
+        document.getElementById("empty-container").classList.remove("hidden");
+
+    }
+    else {
+        document.getElementById("empty-container").classList.add("hidden");
+
+    }
+    if (interview === 0) {
+        document.getElementById("empty-container").classList.remove("hidden");
+    }
+    else {
+        document.getElementById("empty-container").classList.add("hidden");
+
+    }
+
+    if (rejected === 0) {
+        document.getElementById("empty-container").classList.remove("hidden");
+    }
+    else {
+        document.getElementById("empty-container").classList.add("hidden");
+
+    }
 }
 updateCounters();
 
@@ -66,6 +92,12 @@ document.getElementById("job-container").addEventListener("click", function (eve
 
         updateCounters()
     }
+    // for interview container btn at top 
+    if (clickedElement.id === "inter-clicked") {
+        const interOf = document.getElementById("inter-container").children.length;
+        document.getElementById("total-start2").innerText = interOf;
+    }
+
 });
 
 // Interview section 
@@ -89,7 +121,12 @@ document.getElementById("reject-container").addEventListener("click", function (
     const card = clickedElement.parentNode.parentNode.parentNode;
     if (card.querySelector(".bin-btn")) {
         document.getElementById("bin-container").appendChild(card);
+
     }
+    updateCounters();
 })
 
-
+// empty section 
+const total = document.getElementById("all-container").children.length;
+const interview = document.getElementById("inter-container").children.length;
+const rejected = document.getElementById("reject-container").children.length;

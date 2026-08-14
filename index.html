@@ -50,10 +50,10 @@
     </section>
 
     <!-- job Section -->
-    <section id="job-container" class="w-9/10 bg-base-300 mx-auto mt-10 p-5 rounded-lg  space-y-4 job-container">
+    <section id="job-container" class="w-9/10 bg-base-300 mx-auto mt-10 p-5 rounded-lg  space-y-4 job-container  ">
         <div class="flex justify-between">
             <p class="text-4xl text-blue-900 p-5">Available Jobs</p>
-            <p class="text-lg"><span id="job-count">8</span> jobs</p>
+            <p class="text-lg"><span id="total-start2">8</span> of 8 jobs</p>
         </div>
         <div class=""></div>
         <!-- section btn         -->
@@ -62,7 +62,7 @@
             <button onclick="Goto('all-container')" id="all-conatiner"
                 class="btn btn-soft btn-primary text-2xl  rounded-full ">
                 All</button>
-            <button onclick="Goto('inter-container')"
+            <button id="inter-click" onclick="Goto('inter-container')"
                 class="btn btn-soft  btn-primary text-2xl rounded-full">Interview</button>
 
             <button onclick="Goto('reject-container')" class="btn btn-soft  btn-primary text-2xl  rounded-full mb-3.5">
@@ -150,7 +150,7 @@
             </div>
             <!-- 4th job -->
             <section class="  bg-amber-50  flex  mx-auto max-w-[95%] w-full">
-                <div class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[60%]  
+                <div class="bg-amber-50 p-5 rounded-lg shadow- space-y-4 card max-w-[66%]  
              ">
                     <h1 class="text-xl font-semibold  text-blue-900">CloudFirst Inc</h1>
                     <p class=" text-neutral-600">Backend Developer</p>
@@ -166,7 +166,7 @@
                         <button class="btn btn-outline btn-error  reject-btn">REJECTED</button>
                     </div>
                 </div>
-                <div class="w-[33%] flex justify-center items-start pt-5">
+                <div class="  w-[29%] flex justify-center items-start pt-5">
                     <p class="  left-10 bg-red-400 rounded-full w-10 h-10 ml-auto flex justify-center items-center">
                         <i class="fa-solid fa-trash-can bin-btn "></i>
                     </p>
@@ -287,6 +287,15 @@
     </section>
     <!-- bin container -->
     <section id="bin-container" class="hidden"></section>
+    <section id="empty-container"
+        class="flex-col flex items-center justify-center max-w-[95%] pt-5 pb-10 empty-container ">
+        <div class=>
+            <i class=" text-8xl fa-regular fa-file"></i>
+        </div>
+        <div class="text-4xl lg:text-5xl">No Jobs available</div>
+    </section>
+
+
     <!-- scripts are here -->
     <script src="./machine.js"></script>
 
